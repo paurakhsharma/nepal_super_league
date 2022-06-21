@@ -20,12 +20,12 @@ class Scraper {
         html.querySelectorAll('.tabbox-slide table'), participatingTeams);
 
     final leagueStandings = _getLeagueStandings(
-      html.querySelectorAll('section + .fixtures table').first,
+      html.querySelectorAll('section + .fixtures table')[9],
       participatingTeams,
     );
 
     final goalScorers =
-        _getGoalScorers(html.querySelectorAll('section + .fixtures table')[1]);
+        _getGoalScorers(html.querySelectorAll('section + .fixtures table')[10]);
 
     return SuperLeague(
       teams: participatingTeams,
